@@ -36,6 +36,10 @@ header h1 {
     float: left;
 }
 
+main iframe {
+    background-color: #fff;
+}
+
 header div h1 a {
     color: #fff;
     text-decoration: none;
