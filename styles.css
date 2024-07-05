@@ -9,54 +9,33 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #6e5f5f;
+    background-color: #000000;
 }
 
 .container {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
     overflow: hidden; /* Clearfix hack */
+    /* text-align: center; */
 }
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #272727;
     color: #ffffff;
-    padding: 1em 0;
-}
-
-header h1 {
-    float: left;
+    /* padding: 1em 0; */
+    /* height: 100%; */
 }
 
 main iframe {
     background-color: #fff;
 }
 
-header div h1 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header nav {
-    float: right;
-    margin-top: 1.5em;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-
 header nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 1%;
+    /* font-size: 20%; */
+    /* vertical-align: middle; */
 }
 
 header nav ul li a {
@@ -89,12 +68,16 @@ section p {
     text-align: center;
 }
 
+#headerimg {
+    width: 20%;
+}
+
 /* Hero section */
 #hero {
-    background-image: url('hero-image.jpg');
+    /* background-image: url('img/BESLogo.jpg'); */
     background-size: cover;
     background-position: center;
-    color: #554f4f;
+    color: #000000;
     text-align: center;
     padding: 100px 0;
 }
@@ -119,7 +102,7 @@ section p {
 }
 
 #hero .btn:hover {
-    background-color: #555;
+    background-color: #000000;
 }
 
 /* Footer styles */
@@ -146,7 +129,7 @@ footer {
   }
 
   .footer-section h3 {
-    color: #adadad;
+    color: #c7c7c7;
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -209,3 +192,10 @@ footer {
     height:100vh;
     
 } 
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
