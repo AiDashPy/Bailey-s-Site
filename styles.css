@@ -164,6 +164,63 @@ footer p {
   margin-top: 20px;
 }
 
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #000000; /* Black dropdown background */
+  padding: 10px 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  width: 120%;
+}
+
+.dropdown li {
+  text-align: left;
+  margin: 0;
+  position: relative; /* Ensure proper positioning of nested dropdown */
+}
+
+.dropdown li a {
+  color: #ffffff;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background-color: #333333; /* Darker background on hover */
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown li:hover > .dropdown {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #333333; /* Darker background on hover */
+  width: 100%; /* Adjust width as needed */
+  box-shadow: none;
+}
+
+.dropdown li .dropdown li:hover > .dropdown {
+  top: 0;
+  left: 100%;
+}
+
+nav ul li:hover > .dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000000; /* Black dropdown background */
+  width: 100%; /* Adjust width as needed */
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
@@ -236,14 +293,4 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
-
-.blackNav {
-  background: chocolate;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0px;
-  width: 100%;
 }
