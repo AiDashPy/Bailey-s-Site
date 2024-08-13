@@ -15,7 +15,8 @@ body {
 .container {
   max-width: 80%;
   margin: 0 auto;
-  overflow: hidden; /* Clearfix hack */
+  overflow: hidden;
+  /* Clearfix hack */
 }
 
 /* Header styles */
@@ -237,11 +238,12 @@ button:hover {
   background-color: #45a049;
 }
 
-.plotter {
-  background-color: #fff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.4s ease;
+.blackNav {
+  background: chocolate;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px;
+  width: 100%;
 }
