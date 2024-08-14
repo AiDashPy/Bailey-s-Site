@@ -11,10 +11,11 @@ body {
   color: #000000; /* Black text */
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+.container,
+.neocontainer {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+  justify-content: center; /* Centers items horizontally */
 }
 
 header {
@@ -58,52 +59,79 @@ nav ul li a:hover {
   background-color: #333333; /* Darker background on hover */
 }
 
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #000000; /* Black dropdown background */
-  padding: 10px 0;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  width: 120%;
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #333;
 }
 
-.dropdown li {
-  text-align: left;
-  margin: 0;
-  position: relative; /* Ensure proper positioning of nested dropdown */
-}
-
-.dropdown li a {
-  color: #ffffff;
-  padding: 10px 15px;
-  display: block;
+.logo-link {
   text-decoration: none;
 }
 
-.dropdown li a:hover {
-  background-color: #333333; /* Darker background on hover */
+.logo-image {
+  height: 50px;
 }
 
-nav ul li:hover .dropdown {
+.navbar {
+  flex-grow: 1;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
   display: block;
 }
 
-.dropdown li:hover > .dropdown {
-  display: block;
+.nav-link:hover {
+  background-color: #555;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: " ▼";
+  font-size: 0.8em;
+}
+
+.dropdown-menu {
+  display: none;
   position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #333333; /* Darker background on hover */
-  width: 100%; /* Adjust width as needed */
-  box-shadow: none;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
 }
 
-.dropdown li .dropdown li:hover > .dropdown {
-  top: 0;
-  left: 100%;
+.dropdown-menu .dropdown-item {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #666;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 nav ul li:hover > .dropdown {
@@ -116,7 +144,7 @@ nav ul li:hover > .dropdown {
 }
 
 .service-item {
-  width: 80%;
+  width: 30%;
   margin: 20px;
   padding: 15px;
   background-color: #ffffff; /* White service item background */
